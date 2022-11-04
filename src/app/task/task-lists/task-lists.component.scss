@@ -1,0 +1,34 @@
+@use "../../../styles";
+
+.taskListDivPosition {
+  @extend %baseDivHeight;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  overflow-y: scroll;
+}
+
+.taskListDivData {
+  @extend %baseDivData;
+  margin-top: 0px;
+}
+
+.keszHatter {
+  background: #46e846;
+}
+
+.nincsKeszHatter {
+  background: #f16067;
+}
+
+.keszButton {
+  margin-left: auto;
+  order: 2;
+}
+
+.nemKeszAdatokSor {
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  width: 100% !important;
+}

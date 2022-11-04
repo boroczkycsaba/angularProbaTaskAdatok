@@ -1,0 +1,18 @@
+@use '../../styles';
+
+.buttonBejelentkezes {
+  color: #219a25;
+}
+
+.loginDivPosition {
+  @extend %baseDivHeight;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loginDivData {
+  @extend %baseDivData;
+  height: 250px;
+  margin-top: 200px !important;
+}

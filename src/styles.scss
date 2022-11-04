@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+$font-text: "Nimbus sans", sans-serif;
+$dataBgColor: #f5eded;
+
+%divPaddig-shared {
+  padding-top: 20px;
+  display: block;
+  width: 100% !important;
+}
+
+%textForceCenter {
+  text-align: center;
+  width: 100% !important;
+}
+
+%baseDivHeight {
+  display: block;
+  position: absolute;
+  justify-content: center;
+}
+
+%baseDivData {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: $dataBgColor;
+}
+
+body {
+  background: #b5e4f6;
+  font-size: larger;
+}
+
+h1 {
+  font-size: xx-large;
+  font-family: $font-text;
+  @extend %textForceCenter;
+}
+
+h2 {
+  font-size: x-large;
+  font-family: $font-text;
+  @extend %textForceCenter;
+}
+
+button {
+  background-color: #e4ecea;
+  border-radius: 8px;
+  font-size: large;
+  font-family: $font-text;
+}
+
+input {
+  font-size: x-large;
+}
+
+.adatMegjelenitesTavolsag {
+  @extend %divPaddig-shared;
+}
+
+.formField {
+  @extend %textForceCenter;
+}
+
+.hibaUzenetDiv {
+  @extend %divPaddig-shared;
+  color: #a10408;
+  text-align: center;
+}

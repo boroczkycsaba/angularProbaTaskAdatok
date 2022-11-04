@@ -1,0 +1,21 @@
+<h1>Bejelentkező oldal</h1>
+
+<div class="loginDivPosition">
+
+  <div class="loginDivData">
+    <h2>Kérem adja meg a bejelentkezési nevét a feladat kezelő használatához</h2>
+
+    <div class="hibaUzenetDiv" *ngIf="errorMessage != ''">
+      {{errorMessage}}
+    </div>
+
+    <div class="adatMegjelenitesTavolsag formField">
+      Bejelentkezéshez a felhasználónév:<br>
+      <input type="text" name="bejelentkezoNev" [(ngModel)]="loginName"/>
+    </div>
+
+    <div class="adatMegjelenitesTavolsag formField">
+      <button type="button" (click)="loginCheckAngRoute()">Bejelentkezés</button>
+    </div>
+  </div>
+</div>

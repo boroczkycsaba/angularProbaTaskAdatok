@@ -1,0 +1,24 @@
+<app-task-header></app-task-header>
+
+<h1>Feladat létrehozó oldal</h1>
+
+<div class="taskCreateDivPosition">
+  <div class="taskCreateDivData">
+
+    <div class="hibaUzenetDiv" *ngIf="errorMessage != ''">
+      {{errorMessage}}
+    </div>
+
+    <div class="adatMegjelenitesTavolsag formField">
+      Feladat neve<br>
+      <input type="text" name="feladatNev" [(ngModel)]="task.fullName"/>
+    </div>
+    <div class="adatMegjelenitesTavolsag formField">
+      Feladat leírása<br>
+      <input type="text" name="feladatNev" [(ngModel)]="task.description"/>
+    </div>
+    <div class="adatMegjelenitesTavolsag formField">
+      <button type="button" (click)="storeTaskData()">Feladat adatok mentése</button>
+    </div>
+  </div>
+</div>

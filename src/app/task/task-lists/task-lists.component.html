@@ -1,0 +1,27 @@
+<app-task-header></app-task-header>
+
+<h1>Feladat adatok oldal</h1>
+<div class="taskListDivPosition">
+  <div class="taskListDivData">
+
+    <div class="adatMegjelenitesTavolsag formField">
+      <button type="button" (click)="ujTaskOldalraNavigalas()">Új feladat létrehozása</button>
+    </div>
+
+    <h2>El nem végzett feladatok</h2>
+
+    <div class="adatMegjelenitesTavolsag">
+      <p *ngFor="let task of elNemKeszultTaskok; " [appTaskAdatSzinezes]="task" class="nemKeszAdatokSor">
+        {{task | taskAdatMegjelenites}}
+        <button type="button" (click)="taskElkeszult(task)" class="keszButton">Kész</button>
+      </p>
+    </div>
+
+    <h2>Elvégzett feladatok</h2>
+    <div class="adatMegjelenitesTavolsag">
+      <p *ngFor="let task of elKeszultTaskok; " [appTaskAdatSzinezes]="task">
+        {{task | taskAdatMegjelenites}}
+      </p>
+    </div>
+  </div>
+</div>
